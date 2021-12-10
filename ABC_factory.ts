@@ -1,3 +1,10 @@
+interface AbstractFactory {
+    createProductA(): AbstractProductA;
+
+    createProductB(): AbstractProductB;
+}
+
+
 interface AbstractProductA {
     usefulFunctionA(): string;
 }
