@@ -16,3 +16,16 @@ interface AbstractProductB {
      */
     anotherUsefulFunctionB(collaborator: AbstractProductA): string;
 }
+
+
+class ConcreteProductA1 implements AbstractProductA {
+    public usefulFunctionA(): string {
+        return 'The result of the product A1.';
+    }
+}
+
+class ConcreteProductA2 implements AbstractProductA {
+    public usefulFunctionA(): string {
+        return 'The result of the product A2.';
+    }
+}
