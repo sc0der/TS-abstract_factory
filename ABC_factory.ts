@@ -23,7 +23,18 @@ interface AbstractFactory {
 
 
 
+/**
+ * Каждая Конкретная Фабрика имеет соответствующую вариацию продукта.
+ */
+ class ConcreteFactory2 implements AbstractFactory {
+    public createProductA(): AbstractProductA {
+        return new ConcreteProductA2();
+    }
 
+    public createProductB(): AbstractProductB {
+        return new ConcreteProductB2();
+    }
+}
 
 interface AbstractProductA {
     usefulFunctionA(): string;
