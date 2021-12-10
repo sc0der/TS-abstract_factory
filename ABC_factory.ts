@@ -102,3 +102,17 @@ class ConcreteProductB2 implements AbstractProductB {
         return `The result of the B2 collaborating with the (${result})`;
     }
 }
+
+
+/**
+ * Клиентский код работает с фабриками и продуктами только через абстрактные
+ * типы: Абстрактная Фабрика и Абстрактный Продукт. Это позволяет передавать
+ * любой подкласс фабрики или продукта клиентскому коду, не нарушая его.
+ */
+ function clientCode(factory: AbstractFactory) {
+    const productA = factory.createProductA();
+    const productB = factory.createProductB();
+
+    console.log(productB.usefulFunctionB());
+    console.log(productB.anotherUsefulFunctionB(productA));
+}
