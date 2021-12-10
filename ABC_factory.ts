@@ -116,3 +116,14 @@ class ConcreteProductB2 implements AbstractProductB {
     console.log(productB.usefulFunctionB());
     console.log(productB.anotherUsefulFunctionB(productA));
 }
+
+/**
+ * Клиентский код может работать с любым конкретным классом фабрики.
+ */
+ console.log('Client: Testing client code with the first factory type...');
+ clientCode(new ConcreteFactory1());
+ 
+ console.log('');
+ 
+ console.log('Client: Testing the same client code with the second factory type...');
+ clientCode(new ConcreteFactory2());
